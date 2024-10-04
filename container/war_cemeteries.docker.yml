@@ -1,0 +1,8 @@
+container_name: liftr_container_a5ed5141_2ec4_4bdf_8d26_826840af2033
+image_name: war_cemeteries
+docker_build_cmd: docker build --no-cache=false --rm=true  -t="war_cemeteries" D:/Home/dbelveze/Desktop/code_r/container
+docker_run_cmd: docker run --rm  --name "liftr_container_a5ed5141_2ec4_4bdf_8d26_826840af2033"
+  -u `id -u $USER` -v "D:/Home/dbelveze/Desktop/code_r/container:/liftrroot/" war_cemeteries
+  Rscript -e "library('knitr');library('rmarkdown');library('shiny');setwd('/liftrroot/');render(input
+  = 'war_cemeteries.Rmd')"
+
